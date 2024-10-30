@@ -51,12 +51,9 @@ function ProductCard({ data, flex, renderDesc, renderAdd }) {
           {/* price */}
           <CurrencyFormat amount={price} />
         </div>
-        {/* onClick={addToCart} */}
-        {renderAdd && (
-          <button className={classes.button} onClick={addToCart}>
-            add to cart
-          </button>
-        )}
+        <button className={classes.button} onClick={addToCart}>
+          add to cart
+        </button>
       </div>
     </div>
   );

@@ -32,7 +32,6 @@ function ProductDetail() {
           flex={true}
           renderDesc={true}
           key={product.id}
-          renderAdd={true}
         />
       )}
     </LayOut>
