@@ -13,4 +13,4 @@ export const DataProvider = ({ children, reduser, initialState }) => {
 };
 
 // pull and push information from the data Layer
-// export const useStateValue = () => useContext(StateContext);
+export const useStateValue = () => useContext(DataContext);

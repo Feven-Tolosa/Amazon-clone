@@ -6,10 +6,11 @@ import classes from "./Header.module.css";
 import LowerHeader from "./LowerHeader";
 import logo from "../carousel/img/logo.png";
 import { Link } from "react-router-dom";
+import { useStateValue } from "../DataProvidor/DataProvider";
 
 function Header() {
-  // const [{basket}, dispatch] = useContext(DataContext);
-  // console.log(basket.length);
+  const [{ basket }, dispatch] = useStateValue();
+  console.log(basket.length);
   return (
     <>
       <section className={classes.fixed}>
