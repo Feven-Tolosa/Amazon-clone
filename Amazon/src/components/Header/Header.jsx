@@ -10,7 +10,7 @@ import { useStateValue } from "../DataProvidor/DataProvider";
 
 function Header() {
   const [{ basket }, dispatch] = useStateValue();
-  console.log(basket.length);
+  console.log(basket);
   return (
     <>
       <section className={classes.fixed}>
