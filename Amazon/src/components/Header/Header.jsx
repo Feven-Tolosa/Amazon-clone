@@ -9,8 +9,7 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "../DataProvidor/DataProvider";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
-  console.log(basket);
+  const [state, dispatch] = useStateValue();
   return (
     <>
       <section className={classes.fixed}>
@@ -56,14 +55,14 @@ function Header() {
               <span>Account & Lists</span>
             </Link>
             {/* orders */}
-            <Link to="/Order">
+            <Link to="/Orde">
               <p>returns</p>
               <span>& Orders</span>
             </Link>
             {/* cart */}
             <Link to="/Cart" className={classes.cart}>
               <BiCart size={35} />
-              <span>0</span>
+              <span>{state.basket.length}</span>
             </Link>
           </div>
         </div>

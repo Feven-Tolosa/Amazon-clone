@@ -9,6 +9,7 @@ function ProductCard({ data, flex, renderDesc }) {
   // dispatch = action
   const [state, dispatch] = useStateValue();
   // console.log(basket);
+
   const addToCart = () => {
     dispatch({
       type: "ADD_TO_BASKET",
@@ -21,6 +22,7 @@ function ProductCard({ data, flex, renderDesc }) {
         description,
       },
     });
+    console.log(state);
   };
 
   function truncate(str, n) {
